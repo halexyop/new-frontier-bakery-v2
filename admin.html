@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Launch Registrations | New Frontier Bakery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <main class="admin-shell">
+    <header>
+      <div>
+        <p class="eyebrow">New Frontier Bakery</p>
+        <h1>Launch registrations</h1>
+      </div>
+      <a href="/">View landing page</a>
+    </header>
+
+    <section class="login-card" id="loginCard">
+      <h2>Admin access</h2>
+      <p>Enter the password configured on the server.</p>
+      <form id="loginForm">
+        <label for="password">Admin password</label>
+        <input id="password" type="password" autocomplete="current-password" required>
+        <p class="error" id="loginError"></p>
+        <button type="submit">Open dashboard</button>
+      </form>
+    </section>
+
+    <section class="dashboard" id="dashboard" hidden>
+      <div class="summary">
+        <div>
+          <span>Total registrations</span>
+          <strong id="total">0</strong>
+        </div>
+        <div class="dashboard-actions">
+          <button id="refreshButton" type="button">Refresh</button>
+          <button id="exportButton" class="primary" type="button">Export CSV</button>
+          <button id="logoutButton" type="button">Log out</button>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>WhatsApp number</th><th>Registered</th><th>Contact</th></tr>
+          </thead>
+          <tbody id="registrationRows"></tbody>
+        </table>
+        <p class="empty" id="emptyState" hidden>No registrations yet.</p>
+      </div>
+    </section>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>

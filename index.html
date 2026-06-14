@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#861f24">
+  <meta name="description" content="New Frontier Bakery is opening soon. Join the notification list and enjoy 12.5% off online orders during launch month.">
+  <title>New Frontier Bakery | Opening Soon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="hero">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="New Frontier Bakery home">
+        <img src="assets/new-frontier-logo.png" alt="New Frontier Bakery">
+      </a>
+      <span class="nav-note"><span class="pulse"></span> Oven warming up</span>
+    </nav>
+
+    <section class="hero-content">
+      <div class="copy">
+        <p class="eyebrow">Something delicious is rising</p>
+        <h1>A fresh frontier<br>is almost <em>here.</em></h1>
+        <p class="intro">New Frontier Bakery is getting ready to open its doors. Hand-shaped breads, flaky pastries, and small-batch treats are coming your way.</p>
+
+        <div class="countdown-wrap" aria-label="Countdown to launch">
+          <p class="countdown-label">We open in</p>
+          <div class="countdown" id="countdown">
+            <div><strong id="days">30</strong><span>Days</span></div>
+            <b>:</b>
+            <div><strong id="hours">00</strong><span>Hours</span></div>
+            <b>:</b>
+            <div><strong id="minutes">00</strong><span>Minutes</span></div>
+            <b>:</b>
+            <div><strong id="seconds">00</strong><span>Seconds</span></div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="notify-button" id="openModal">Notify me on WhatsApp <span aria-hidden="true">&rarr;</span></button>
+          <p class="privacy-note">One message when we launch. No spam.</p>
+        </div>
+      </div>
+
+      <aside class="offer-card">
+        <span class="offer-kicker">Launch month treat</span>
+        <strong>12.5<sup>%</sup></strong>
+        <h2>off every online order</h2>
+        <p>For one full month after launch. Exclusively on our website.</p>
+        <div class="offer-code">No code needed</div>
+      </aside>
+    </section>
+
+    <footer>
+      <span>&copy; 2026 New Frontier Bakery</span>
+      <span>Made fresh. Served warm.</span>
+    </footer>
+  </main>
+
+  <div class="modal" id="notifyModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card">
+      <button class="close-button" data-close aria-label="Close">&times;</button>
+      <span class="modal-icon">NFB</span>
+      <p class="eyebrow">Be first in line</p>
+      <h2 id="modalTitle">Get notified on WhatsApp</h2>
+      <p>Enter your WhatsApp number and we will message you manually when the bakery website launches.</p>
+      <form id="notifyForm">
+        <label for="phone">WhatsApp number</label>
+        <div class="phone-field">
+          <select id="countryCode" aria-label="Country code">
+            <option value="+91">+91</option>
+            <option value="+1">+1</option>
+            <option value="+44">+44</option>
+            <option value="+971">+971</option>
+          </select>
+          <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="98765 43210" required minlength="7" maxlength="15">
+        </div>
+        <p class="form-error" id="formError" aria-live="polite"></p>
+        <button class="submit-button" type="submit">Submit my number <span>&rarr;</span></button>
+      </form>
+      <small>Your number is securely registered for this launch alert only.</small>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
